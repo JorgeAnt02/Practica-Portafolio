@@ -1,0 +1,764 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
+/* Se importa la fuente Open Sans desde Google Fonts */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'open sans';
+}
+/* Se establecen valores por defecto para todos los elementos: padding y margen a 0, box-sizing a border-box y la fuente a Open Sans */
+
+html{
+    scroll-behavior: smooth;
+}
+/* Se establece el comportamiento de desplazamiento a suave para toda la página */
+
+/* sección INICIO */
+.inicio{
+    background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url(I_PORTAFOLIO/FJS.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    background-attachment: fixed;
+}
+/* Se establecen las propiedades de la sección de inicio, incluyendo un fondo con una imagen y un gradiente, y se fija el fondo para que no se desplace al hacer scroll */
+
+.contenido{
+    max-width: 1300px;
+    margin: auto;
+}
+/* Se establece un ancho máximo para el contenido y se centra automáticamente */
+
+/* ENCABEZADO */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+/* Se establecen las propiedades del encabezado para que se muestre como una fila con espacio entre los elementos y alineados al centro verticalmente */
+
+header h1 a{
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 3px;
+}
+/* Se establecen las propiedades de los enlaces en el encabezado para que sean blancos, sin subrayado y con un espaciado entre letras de 3px */
+
+header h1 a:hover{
+    color: #ff0015;
+}
+/* Se cambia el color de los enlaces en el encabezado a rojo cuando se pasa el cursor sobre ellos */
+
+nav ul{
+    list-style: none;
+    display: flex;
+}
+/* Se establecen las propiedades de la lista de navegación para que se muestre como una fila y sin marcadores de lista */
+
+nav ul li{
+    margin: 0 15px;
+} 
+/* Se establece un margen horizontal para los elementos de la lista de navegación */
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5px 7px;
+    transition: .3s;
+}
+/* Se establecen las propiedades de los enlaces en la lista de navegación, incluyendo color, sin subrayado, texto en mayúsculas, padding y una transición suave */
+
+nav ul li a:hover{
+    background-color: #aaaaaace;
+    color: #ff0000; 
+}
+/* Se cambia el color de fondo y de texto de los enlaces en la lista de navegación cuando se pasa el cursor sobre ellos */
+
+.inicio .frase{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: normal;
+    color: #ffffff;
+    font-size: 3rem;
+    width: 100%;
+    text-align: center;
+}
+/* Se establecen las propiedades de la frase en la sección de inicio para que se muestre centrada, con un tamaño de fuente de 3rem y texto alineado al centro */
+
+.inicio .frase .resaltar{
+    font-weight: bold;
+}
+/* Se establece un peso de fuente en negrita para los elementos con la clase .resaltar dentro de la frase en la sección de inicio */
+
+.subir{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: 2px solid #212121;
+    border-radius: 50%;
+    color: #212121;
+    cursor: pointer;
+    background: rgba(255, 255, 255, .5);
+    z-index: 100;
+}
+/* Se establecen las propiedades del botón para subir, incluyendo tamaño, posición fija en la parte inferior derecha, forma circular, color de fondo semi-transparente y un cursor de puntero */
+
+/* SECCION SOBRE MI */
+.sobre-mi{
+    padding: 70px 0;
+}
+/* Se establece un padding vertical para la sección sobre mí */
+
+.sobre-mi .fila{
+    display: flex;
+    justify-content: space-between;
+}
+/* Se establecen las propiedades de la fila en la sección sobre mí para que se muestre como una fila con espacio entre los elementos */
+
+.sobre-mi .fila .contenedor-img{
+    width: 40%;
+}
+/* Se establece un ancho para el contenedor de la imagen en la fila de la sección sobre mí */
+
+  
+.sobre-mi .fila .contenedor-img img{
+    width: 100%;
+}
+/* Se establece el ancho de la imagen en el contenedor de la imagen a 100% */
+
+.sobre-mi .fila .info{
+    width: 55%;
+    padding: 0px 30px;
+    color: #5f5f5f;
+}
+/* Se establecen las propiedades del contenedor de información, incluyendo el ancho, el padding y el color del texto */
+
+.sobre-mi .fila .info .opciones{
+    display: flex;
+    justify-content: space-around;
+}
+/* Se establecen las propiedades de las opciones para que se muestren como una fila con espacio alrededor */
+
+.sobre-mi .fila .info .opciones button{
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom: 3px solid #5f5f5f;
+    padding-bottom: 7px;
+    width: 130px;
+    cursor: pointer;
+}
+/* Se establecen las propiedades de los botones en las opciones, incluyendo el color de fondo transparente, sin borde, texto en mayúsculas, peso de fuente en negrita, tamaño de fuente, borde inferior, padding inferior, ancho y cursor de puntero */
+
+.sobre-mi .fila .info .opciones button.selected{
+    border-bottom: 3px solid #ff0022;
+    color: #b30c0c;
+}
+/* Se cambia el color del borde inferior y del texto de los botones seleccionados en las opciones */
+
+.sobre-mi .fila .info .info-opcion{
+    margin-top: 40px;
+}
+/* Se establece un margen superior para las opciones de información */
+
+.sobre-mi .fila .info .info-opcion h2{
+    color: #000;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+/* Se establecen las propiedades de los títulos en las opciones de información, incluyendo el color, el tamaño de fuente y el margen inferior */
+
+.color{
+    color: #f70000;
+}
+/* Se establece el color rojo para los elementos con la clase .color */
+
+.sobre-mi .fila .info .info-opcion p{
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+/* Se establecen las propiedades de los párrafos en las opciones de información, incluyendo la altura de línea y el margen inferior */
+
+#info-sobre-mi{
+    display: block;
+}
+/* Se muestra el elemento con el id #info-sobre-mi */
+
+#info-skills{
+    display: none;
+}
+/* Se oculta el elemento con el id #info-skills */
+
+.sobre-mi .fila .info .info-opcion .skill{
+    margin-bottom: 20px;
+}
+/* Se establece un margen inferior para los elementos con la clase .skill en las opciones de información */
+
+.sobre-mi .fila .info .info-opcion .skill .texto{
+    display: flex;
+    justify-content: space-between;
+}
+/* Se establecen las propiedades del texto en los elementos con la clase .skill para que se muestre como una fila con espacio entre los elementos */
+
+.sobre-mi .fila .info .info-opcion .skill .contenedor-barra{
+    background-color: #000000;
+    height: 10px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+/* Se establecen las propiedades del contenedor de la barra en los elementos con la clase .skill, incluyendo el color de fondo, la altura, el ancho, el radio del borde, el desbordamiento oculto y la posición relativa */
+
+.sobre-mi .fila .info .info-opcion .skill .contenedor-barra .relleno{
+    height: 10px;
+    position: absolute;
+    width: 0;
+    background-color: #f80000;
+}
+/* Se establecen las propiedades del relleno de la barra en los elementos con la clase .skill, incluyendo la altura, la posición absoluta, el ancho inicial y el color de fondo */
+
+@keyframes animHtml {
+    0%{width: 0%;}
+    100%{width: 95%;}
+}
+/* Se define una animación para aumentar el ancho del relleno de la barra de habilidades de HTML del 0% al 95% */
+
+@keyframes animCss {
+    0%{width: 0%;}
+    100%{width: 90%;}
+}
+/* Se define una animación para aumentar el ancho del relleno de la barra de habilidades de CSS del 0% al 90% */
+
+@keyframes animJs {
+    0%{width: 0%;}
+    100%{width: 85%;}
+}
+/* Se define una animación para aumentar el ancho del relleno de la barra de habilidades de JavaScript del 0% al 85% */
+
+@keyframes animReact {
+    0%{width: 0%;}
+    100%{width: 75%;}
+}
+/* Se define una animación para aumentar el ancho del relleno de la barra de habilidades de React del 0% al 75% */
+
+@keyframes animBoostrap {
+    0%{width: 0%;}
+    100%{width: 93%;}
+}
+/* Se define una animación para aumentar el ancho del relleno de la barra de habilidades de Bootstrap del 0% al 93% */
+
+
+/* SECCION SERVICIOS */
+.servicios{
+    background-color: #ededed; /* Color de fondo de la sección de servicios */
+    padding: 70px 0; /* Espaciado interno de la sección de servicios */
+}
+
+.titulo-seccion{
+    text-align: center; /* Alineación del texto del título de la sección */
+    margin-bottom: 20px; /* Margen inferior del título de la sección */
+    font-size: 40px; /* Tamaño de fuente del título de la sección */
+}
+
+.servicios .items-servicios{
+    display: grid; /* Los elementos de servicios se muestran en una cuadrícula */
+    grid-template-columns: 30% 30% 30%; /* La cuadrícula tiene tres columnas, cada una ocupa el 30% del ancho */
+    justify-content: space-between; /* Hay espacio entre las columnas */
+    gap: 30px; /* Espacio entre los elementos de la cuadrícula */
+}
+
+.servicios .items-servicios .item{
+    padding: 30px; /* Espaciado interno de cada elemento de servicio */
+    text-align: center; /* Alineación del texto de cada elemento de servicio */
+    color: #5f5f5f; /* Color del texto de cada elemento de servicio */
+    transition: .3s; /* Transición suave al cambiar el estado de un elemento de servicio */
+}
+
+.servicios .items-servicios .item:hover{
+    background-color: #c7c6c6; /* Color de fondo de un elemento de servicio cuando se pasa el cursor sobre él */
+    border-radius: 20px; /* Radio de la esquina de un elemento de servicio cuando se pasa el cursor sobre él */
+}
+
+.servicios .items-servicios .item i{
+    font-size: 50px; /* Tamaño de fuente del ícono de cada elemento de servicio */
+}
+
+.servicios .items-servicios .item h3{
+    margin: 15px 0; /* Margen alrededor del título de cada elemento de servicio */
+}
+
+/* TRABAJOS */
+.trabajos{
+    padding: 70px 0; /* Espaciado interno de la sección de trabajos */
+}
+
+.trabajos .portfolio{
+    display: grid; /* Los elementos del portafolio se muestran en una cuadrícula */
+    grid-template-columns: max(350px) max(350px) max(350px); /* La cuadrícula tiene tres columnas, cada una con un ancho máximo de 350px */
+    justify-content: space-around; /* Hay espacio alrededor de las columnas */
+    grid-gap: 40px; /* Espacio entre los elementos de la cuadrícula */
+}
+
+.trabajos .portfolio .item{
+    height: 400px; /* Altura de cada elemento del portafolio */
+    overflow: hidden; /* Si el contenido excede la altura, se oculta */
+    position: relative; /* Posicionamiento relativo para permitir el posicionamiento absoluto de los elementos hijos */
+}
+
+.trabajos .portfolio .item img{
+    width: 100%; /* Las imágenes ocupan el 100% del ancho del elemento del portafolio */
+    display: block; /* Las imágenes se muestran como bloques */
+    object-fit: cover; /* Las imágenes se redimensionan para cubrir todo el elemento del portafolio */
+}
+
+.trabajos .portfolio .item .info-trabajo{
+    position: absolute; /* Posicionamiento absoluto para superponerse al elemento del portafolio */
+    top: 0; /* Alineado con la parte superior del elemento del portafolio */
+    left: 0; /* Alineado con el lado izquierdo del elemento del portafolio */
+    background: linear-gradient(rgb(243, 0, 0),rgba(240, 192, 199, 0.8)); /* Fondo degradado */
+    width: 100%; /* Ocupa el 100% del ancho del elemento del portafolio */
+    height: 100%; /* Ocupa el 100% de la altura del elemento del portafolio */
+    display: flex; /* Se utiliza flexbox para organizar el contenido */
+    flex-direction: column; /* El contenido se organiza en una columna */
+    justify-content: center; /* El contenido se centra verticalmente */
+    align-items: center; /* El contenido se centra horizontalmente */
+    opacity: 0; /* Inicialmente, el contenido es transparente */
+    scale: 0; /* Inicialmente, el contenido está reducido a 0 */
+    transition: .5s; /* Transición suave al cambiar el estado del contenido */
+    color: #fffffff8; /* Color del texto del contenido */
+}
+
+.trabajos .portfolio .item .info-trabajo h2{
+    margin-bottom: 10px; /* Margen inferior del título del contenido */
+}
+
+.trabajos .portfolio .item .info-trabajo p{
+    margin-bottom: 10px; /* Margen inferior del párrafo del contenido */
+}
+
+.trabajos .portfolio .item .info-trabajo button{
+   background-color: #000; /* Color de fondo del botón del contenido */
+   color: #fff; /* Color del texto del botón del contenido */
+   padding: 10px 15px; /* Espaciado interno del botón del contenido */
+   border-radius: 30px; /* Radio de las esquinas del botón del contenido */
+   border: none; /* Sin borde en el botón del contenido */
+   font-weight: bold; /* Texto en negrita en el botón del contenido */
+   cursor: pointer; /* El cursor se convierte en un puntero al pasar sobre el botón del contenido */
+}
+
+.trabajos .portfolio .item:hover .info-trabajo{
+    opacity: 1; /* Cuando se pasa el cursor sobre el elemento del portafolio, el contenido se vuelve opaco */
+    scale:1; /* Cuando se pasa el cursor sobre el elemento del portafolio, el contenido se amplía a su tamaño original */
+}
+
+/* SECCION CURRICULUM */
+.curriculum .contenido{
+    padding: 70px 0; /* Espaciado interno de la sección de currículum */
+}
+
+.curriculum .numeros{
+    background: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0,.5)), url(I_PORTAFOLIO/SNK.jpg); /* Fondo degradado con una imagen de fondo */
+    height: 400px; /* Altura de la sección de números */
+    width: 100%; /* Ancho de la sección de números */
+    background-size: cover; /* La imagen de fondo cubre toda la sección */
+    background-repeat: no-repeat; /* La imagen de fondo no se repite */
+    display: flex; /* Se utiliza flexbox para organizar los elementos */
+    justify-content: space-around; /* Hay espacio alrededor de los elementos */
+    align-items: center; /* Los elementos se centran verticalmente */
+}
+
+.curriculum .numeros .item{
+    text-align: center; /* Alineación del texto de cada elemento de la sección de números */
+}    
+
+.curriculum .numeros .item .num{
+    display: block; /* El número se muestra como un bloque */
+    font-size: 4rem; /* Tamaño de fuente del número */
+    font-weight: bold; /* El número se muestra en negrita */
+    color: #ff0000; /* Color del número */
+    line-height: 4rem; /* Altura de línea del número */
+}
+
+.curriculum .numeros .item .txt{
+    color: #fff; /* Color del texto de cada elemento de la sección de números */
+    font-size: 14px; /* Tamaño de fuente del texto */
+    font-weight: bold; /* El texto se muestra en negrita */
+}
+
+.curriculum .contenido .recorrido-anios{
+    max-width: 800px; /* Ancho máximo de la sección de recorrido por años */
+    margin: 30px auto; /* Margen alrededor de la sección de recorrido por años */
+}
+
+.curriculum .contenido .derecha{
+    display: flex; /* Se utiliza flexbox para organizar los elementos */
+    justify-content: end; /* Los elementos se alinean al final */
+    position: relative; /* Posicionamiento relativo para permitir el posicionamiento absoluto de los elementos hijos */
+    right: 40px; /* Desplazamiento a la derecha */
+}
+
+.curriculum .contenido .izquierda{
+    display: flex; /* Se utiliza flexbox para organizar los elementos */
+    justify-content: start; /* Los elementos se alinean al inicio */
+    position: relative; /* Posicionamiento relativo para permitir el posicionamiento absoluto de los elementos hijos */
+    left: 40px; /* Desplazamiento a la izquierda */
+}
+
+.curriculum .contenido .recorrido-anios .dato{
+    max-width: 400px; /* Ancho máximo de cada dato del recorrido por años */
+    display: grid; /* Los elementos del dato se muestran en una cuadrícula */
+    align-items: center; /* Los elementos de la cuadrícula se centran verticalmente */
+}
+
+.curriculum .contenido .recorrido-anios .dato-der{
+    grid-template-columns: 80px 50px auto; /* La cuadrícula tiene tres columnas con anchos específicos */
+}
+
+.curriculum .contenido .recorrido-anios .dato-izq{
+    grid-template-columns: auto 50px 80px; /* La cuadrícula tiene tres columnas con anchos específicos */
+}
+
+.curriculum .contenido .recorrido-anios .dato .anio{
+    width: 80px; /* Ancho del año */
+    height: 80px; /* Altura del año */
+    border-radius: 50%; /* El año se muestra como un círculo */
+    display: flex; /* Se utiliza flexbox para organizar el contenido del año */
+    align-items: center; /* El contenido del año se centra verticalmente */
+    justify-content: center; /* El contenido del año se centra horizontalmente */
+    font-weight: bold; /* El año se muestra en negrita */
+    background-color: #fff; /* Color de fondo del año */
+}
+
+.curriculum .contenido .recorrido-anios .dato .linea{
+    height: 10px; /* Altura de la línea */
+}
+
+.curriculum .contenido .recorrido-anios .dato .info{
+    font-size: 16px; /* Tamaño de fuente de la información */
+    padding: 10px; /* Espaciado interno de la información */
+    color: #fff; /* Color de la información */   
+}
+
+.curriculum .contenido .recorrido-anios .dato .info h3{
+ font-size: 16px; /* Tamaño de fuente del título de la información */   
+}
+
+.curriculum .contenido .recorrido-anios .dato .info p{
+    font-size: 12px; /* Tamaño de fuente del párrafo de la información */
+    line-height: 20px; /* Altura de línea del párrafo de la información */   
+}
+
+.c1{
+    background-color: #e74452; /* Color de fondo para la clase .c1 */
+}
+
+.c2{
+    background-color: #df792b; /* Color de fondo para la clase .c2 */
+}
+
+.c3{
+    background-color: #16a8a5; /* Color de fondo para la clase .c3 */
+}
+
+.c4{
+    background-color: #0e526f; /* Color de fondo para la clase .c4 */
+}
+
+.b1{
+    border:10px solid #e74452; /* Borde y color del borde para la clase .b1 */
+    color: #e74452; /* Color del texto para la clase .b1 */
+}
+
+.b2{
+    border:10px solid #df792b; /* Borde y color del borde para la clase .b2 */
+    color: #df792b; /* Color del texto para la clase .b2 */
+}
+
+.b3{
+    border:10px solid #16a8a5; /* Borde y color del borde para la clase .b3 */
+    color: #16a8a5; /* Color del texto para la clase .b3 */
+}
+
+.b4{
+    border:10px solid #0e526f; /* Borde y color del borde para la clase .b4 */
+    color: #0e526f; /* Color del texto para la clase .b4 */
+}
+
+/* SECCION CONTACTO */
+.contacto .contenido{
+    padding: 70px 0; /* Espaciado interno de la sección de contacto */
+}
+
+.contacto .banner{
+    background: linear-gradient(rgba(0,0,0, 0.8), rgba(0,0,0,.8)), url(I_PORTAFOLIO/T2.jpg); /* Fondo degradado con una imagen de fondo */
+    height: 400px; /* Altura del banner */
+    width: 100%; /* Ancho del banner */
+    background-size: cover; /* La imagen de fondo cubre todo el banner */
+    background-repeat: no-repeat; /* La imagen de fondo no se repite */
+    color: #fff; /* Color del texto del banner */
+    display: flex; /* Se utiliza flexbox para organizar los elementos del banner */
+    flex-direction: column; /* Los elementos del banner se organizan en una columna */
+    justify-content: center; /* Los elementos del banner se centran verticalmente */
+    align-items: center; /* Los elementos del banner se centran horizontalmente */
+}
+
+.contacto .banner p{
+    font-size: 22px; /* Tamaño de fuente del párrafo del banner */
+}
+
+.contacto .banner h2{
+    font-size: 3rem; /* Tamaño de fuente del título del banner */
+    margin: 10px 0; /* Margen alrededor del título del banner */
+}
+
+.contacto .banner button{
+    border: none; /* Sin borde en el botón del banner */
+    background-color:#ff0000; /* Color de fondo del botón del banner */
+    color: #fff; /* Color del texto del botón del banner */
+    padding: 10px 15px; /* Espaciado interno del botón del banner */
+    font-weight: bold; /* El texto del botón del banner se muestra en negrita */
+    border-radius: 30px; /* Radio de las esquinas del botón del banner */
+    cursor: pointer; /* El cursor se convierte en un puntero al pasar sobre el botón del banner */
+}
+
+.contacto .contenido .fila{
+    display: flex; /* Se utiliza flexbox para organizar los elementos de la fila */
+    justify-content: space-around; /* Hay espacio alrededor de los elementos de la fila */
+}
+
+.contacto .contenido .fila .item{
+    padding: 10px 15px; /* Espaciado interno de cada elemento de la fila */
+    text-align: center; /* Alineación del texto de cada elemento de la fila */
+}
+
+.contacto .contenido .fila .item span{
+    background-color: #ff0000; /* Color de fondo del span de cada elemento de la fila */
+    width: 50px; /* Ancho del span */
+    height: 50px; /* Altura del span */
+    margin: auto; /* Margen automático del span */
+    display: block; /* El span se muestra como un bloque */
+    color: #fff; /* Color del texto del span */
+    border-radius: 50%; /* El span se muestra como un círculo */
+    display: flex; /* Se utiliza flexbox para organizar el contenido del span */
+    align-items: center; /* El contenido del span se centra verticalmente */
+    justify-content: center; /* El contenido del span se centra horizontalmente */
+    font-size: 20px; /* Tamaño de fuente del contenido del span */
+    margin-bottom: 20px; /* Margen inferior del span */
+}
+
+.contacto .contenido .fila .item p{
+    color: #5f5f5f; /* Color del párrafo de cada elemento de la fila */
+}
+
+.contacto .formulario{
+    display: flex; /* Se utiliza flexbox para organizar los elementos del formulario */
+    justify-content: space-between; /* Hay espacio entre los elementos del formulario */
+    margin-top: 50px; /* Margen superior del formulario */
+}
+
+.contacto .formulario .col{
+    width: 49%; /* Ancho de cada columna del formulario */
+}
+
+.contacto .formulario .col img{
+    width: 100%; /* Las imágenes ocupan el 100% del ancho de la columna */
+    filter: grayscale(); /* Las imágenes se muestran en escala de grises */
+}
+
+.contacto .formulario .fila-input{
+    display: flex; /* Se utiliza flexbox para organizar los elementos de la fila de entrada */
+    justify-content: space-between; /* Hay espacio entre los elementos de la fila de entrada */
+    margin-bottom: 30px; /* Margen inferior de la fila de entrada */
+}
+
+.contacto .formulario .fila-input .input{
+    width: 47%; /* Ancho de cada entrada de la fila de entrada */
+    border-bottom: 2px solid #000; /* Borde inferior de cada entrada */
+    padding: 7px 0; /* Espaciado interno de cada entrada */
+    display: flex; /* Se utiliza flexbox para organizar el contenido de cada entrada */
+}
+
+.contacto .formulario .fila-input .input input,
+.contacto .formulario .col > .input input
+{
+    border: none; /* Sin borde en los campos de entrada */
+    margin-left: 10px; /* Margen izquierdo en los campos de entrada */
+    outline: none; /* Sin contorno en los campos de entrada */
+    width: 100%; /* Los campos de entrada ocupan el 100% del ancho de la entrada */
+}
+
+.contacto .formulario i{
+    color: #ff0000; /* Color de los íconos del formulario */
+}
+
+.contacto .formulario .col > .input{
+    width: 100%; /* Ancho de cada entrada de la columna */
+    border-bottom: 2px solid #000; /* Borde inferior de cada entrada de la columna */
+    padding: 7px 0; /* Espaciado interno de cada entrada de la columna */
+    display: flex; /* Se utiliza flexbox para organizar el contenido de cada entrada de la columna */
+    margin-bottom: 30px; /* Margen inferior de cada entrada de la columna */
+}
+
+.contacto .formulario .col textarea{
+    width: 100%; /* El área de texto ocupa el 100% del ancho de la entrada */
+    border: none; /* Sin borde en el área de texto */
+    outline: none; /* Sin contorno en el área de texto */
+    margin-left: 8px; /* Margen izquierdo en el área de texto */
+}
+
+.contacto .formulario button{
+    border: none; /* Sin borde en el botón del formulario */
+    background-color:#ff0000; /* Color de fondo del botón del formulario */
+    color: #fff; /* Color del texto del botón del formulario */
+    padding: 10px 15px; /* Espaciado interno del botón del formulario */
+    font-weight: bold; /* El texto del botón del formulario se muestra en negrita */
+    border-radius: 5px; /* Radio de las esquinas del botón del formulario */
+    cursor: pointer; /* El cursor se convierte en un puntero al pasar sobre el botón del formulario */
+    width: 100%; /* El botón del formulario ocupa el 100% del ancho de la entrada */
+    margin-top: 20px; /* Margen superior del botón del formulario */
+}
+
+/* FOOTER */
+footer{
+    width: 100%; /* El ancho del pie de página es del 100% */
+    padding: 60px 0; /* El pie de página tiene un relleno superior e inferior de 60px */
+    text-align: center; /* El texto del pie de página está centrado */
+    background: #000000; /* El fondo del pie de página es negro */
+    color: #fff; /* El color del texto del pie de página es blanco */
+}
+footer h2{
+    margin-bottom: 30px; /* Los títulos h2 en el pie de página tienen un margen inferior de 30px */
+}
+footer .red{
+    width: 40px; /* Los elementos con la clase .red en el pie de página tienen un ancho de 40px */
+    height: 40px; /* Los elementos con la clase .red en el pie de página tienen una altura de 40px */
+    border-radius: 50%; /* Los elementos con la clase .red en el pie de página son redondos */
+    display: inline-block; /* Los elementos con la clase .red en el pie de página se muestran en línea */
+    line-height: 40px; /* Los elementos con la clase .red en el pie de página tienen una altura de línea de 40px */
+    margin: 0 10px; /* Los elementos con la clase .red en el pie de página tienen un margen izquierdo y derecho de 10px */
+}
+.r1{
+    background: #3e5294; /* Los elementos con la clase .r1 tienen un fondo de color #3e5294 */
+}
+.r2{
+    background: #64a8e4; /* Los elementos con la clase .r2 tienen un fondo de color #64a8e4 */
+}
+.r3{
+    background:#16a8a5; /* Los elementos con la clase .r3 tienen un fondo de color #16a8a5 */
+}
+.r4{
+    background:#e74452; /* Los elementos con la clase .r4 tienen un fondo de color #e74452 */
+}
+footer p{
+    margin-top: 30px; /* Los párrafos en el pie de página tienen un margen superior de 30px */
+}
+footer p a{
+    color: #fc0000; /* Los enlaces en los párrafos del pie de página son de color rojo */
+    text-decoration: none; /* Los enlaces en los párrafos del pie de página no tienen decoración (no subrayados) */
+}
+footer p a:hover{
+    text-decoration: underline; /* Cuando se pasa el cursor sobre los enlaces en los párrafos del pie de página, se subrayan */
+}
+
+
+/* MENU RESPONSIVO */
+.nav-responsive{
+    display: none; /* El menú no se muestra por defecto */
+    justify-content: center; /* Los elementos del menú se centran horizontalmente */
+    justify-content: space-around; /* Hay un espacio uniforme entre los elementos del menú */
+    align-items: center; /* Los elementos del menú se centran verticalmente */
+    margin-top: 20px; /* Hay un margen superior de 20px */
+}
+.nav-responsive a{
+    text-decoration: none; /* Los enlaces no tienen decoración (no subrayados) */
+    color: #ff0000; /* El color de los enlaces es rojo */
+    font-size: 30px; /* El tamaño de la fuente de los enlaces es 30px */
+}
+
+/* SECCION RESPONSIVE */
+@media screen and (max-width:1130px){
+    .trabajos .portfolio{
+        grid-template-columns: max(400px) max(400px); /* En pantallas de hasta 1130px, la sección de trabajos tiene dos columnas de hasta 400px cada una */
+    }
+}
+@media screen and (max-width:850px){
+    header{
+        display: block; /* El encabezado se muestra como un bloque en pantallas de hasta 850px */
+        text-align: center; /* El texto del encabezado está centrado */
+        background: rgba(0, 0, 0, 0.8); /* El fondo del encabezado es negro con una opacidad del 80% */
+    }
+    nav{
+        display: none; /* La navegación no se muestra en pantallas de hasta 850px */
+    }
+    .nav-responsive{
+        display: flex; /* El menú responsivo se muestra en pantallas de hasta 850px */
+    }
+    .trabajos .portfolio{
+        grid-template-columns: auto /* En pantallas de hasta 850px, la sección de trabajos tiene una sola columna */
+    }
+    .servicios .items-servicios{
+        grid-template-columns:auto auto; /* En pantallas de hasta 850px, la sección de servicios tiene dos columnas */
+    }
+    .sobre-mi .fila{
+        display: block; /* En pantallas de hasta 850px, las filas de la sección sobre mí se muestran como bloques */
+    }
+    .sobre-mi .fila .contenedor-img{
+        width: 100%; /* En pantallas de hasta 850px, el contenedor de la imagen en la sección sobre mí tiene un ancho del 100% */
+    }
+      
+    .sobre-mi .fila .contenedor-img img{
+        width: 200px; /* En pantallas de hasta 850px, la imagen en la sección sobre mí tiene un ancho de 200px */
+        display: block; /* La imagen se muestra como un bloque */
+        margin: auto; /* La imagen está centrada */
+    }
+    .sobre-mi .fila .info{
+        width: 100%; /* En pantallas de hasta 850px, la información en la sección sobre mí tiene un ancho del 100% */
+        margin-top: 30px; /* Hay un margen superior de 30px */
+    }
+    .curriculum .numeros{
+        display: block; /* En pantallas de hasta 850px, los números del currículum se muestran como un bloque */
+    }
+    .curriculum .contenido .derecha{
+        right: 0px; /* En pantallas de hasta 850px, el contenido de la derecha del currículum está alineado a la derecha */
+        justify-content: center; /* El contenido de la derecha del currículum está centrado horizontalmente */
+    }
+    .curriculum .contenido .izquierda{
+        left: 0px; /* En pantallas de hasta 850px, el contenido de la izquierda del currículum está alineado a la izquierda */
+        justify-content: center; /* El contenido de la izquierda del currículum está centrado horizontalmente */
+    }
+    .curriculum .numeros{
+        height: auto; /* En pantallas de hasta 850px, los números del currículum tienen una altura automática */
+        padding: 30px 0; /* En pantallas de hasta 850px, los números del currículum tienen un relleno superior e inferior de 30px */
+    }
+    .curriculum .numeros .item{
+        margin-bottom: 20px; /* En pantallas de hasta 850px, los ítems de los números del currículum tienen un margen inferior de 20px */
+    }
+    .curriculum .numeros .item .num{
+        font-size: 3rem; /* En pantallas de hasta 850px, el tamaño de la fuente de los números del currículum es 3rem */
+    }
+    .contacto .contenido .fila{
+        display: block; /* En pantallas de hasta 850px, las filas del contenido de contacto se muestran como bloques */
+    }
+    .contacto .contenido .formulario{
+        display: block; /* En pantallas de hasta 850px, el formulario de contacto se muestra como un bloque */
+    }
+    .contacto .contenido .formulario .col{
+        width: 100%; /* En pantallas de hasta 850px, las columnas del formulario de contacto tienen un ancho del 100% */
+        padding: 0 20px; /* En pantallas de hasta 850px, las columnas del formulario de contacto tienen un relleno izquierdo y derecho de 20px */
+        margin-bottom: 20px; /* En pantallas de hasta 850px, las columnas del formulario de contacto tienen un margen inferior de 20px */
+    }
+}
